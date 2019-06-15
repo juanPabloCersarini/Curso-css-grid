@@ -1,0 +1,22 @@
+.contenedor{
+	display: grid;
+	grid-gap: 20px;
+	height: 700px;
+	grid-template-columns: repeat(3,150px);
+	grid-template-rows: repeat(3,150px);
+
+	/*Alinear Horizontalmente*/
+	/* start - center - end */
+	/* izq - centro - der */
+	/*space-around agrega espacios alrededor de las columnas*/
+	/*space-between lo mismo sin agregar espacio antes de la primer col y desp de la última*/
+	/*space-evenly como space-around pero todos los espacios son iguales*/
+	justify-content: space-evenly;
+
+	/*Alinear Verticalmente*/
+	/*normal - start - center - end*/
+	/*space-around - space-between - space-evenly*/
+
+	align-content: space-evenly;
+
+}

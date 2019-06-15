@@ -1,0 +1,107 @@
+.contenedor{
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(9,auto);
+	grid-template-areas: "header 		header 		header     header   header"
+						 "boton         boton       boton      boton    boton"
+	                     "contenido 	contenido 	contenido  sidebarUno sidebarUno"
+	                     "contenido 	contenido 	contenido  sidebarUno sidebarUno"
+	                     "contenido 	contenido 	contenido  sidebarUno sidebarUno"
+	                     "widget     	widget 		widget     sidebarDos sidebarDos"
+	                     "widget     	widget 		widget     sidebarDos sidebarDos"
+	                     "widget     	widget 		widget     sidebarDos sidebarDos"
+	                     "footer 		footer 		footer     footer   footer";
+						
+}
+
+.contenedor .header{
+	background: #f19484;
+	grid-column-start: header;
+	grid-column-end: header;
+}
+
+.contenedor .boton{
+	display: block;
+	width: 150px;
+	justify-self: stretch;
+	align-self: stretch;
+	/*background: linear-gradient(50grad, #1f618d,#f19484);*/
+	background: #1f618d;
+	padding: 10px 20px;
+	margin: auto;
+	text-align: center;
+	color: #7da4bd;
+	font-size: 18px;
+	font-weight: bold;
+	/*margin-top: 3px;*/
+	text-transform: uppercase;
+	letter-spacing: 2px:;
+	border-radius: 10px;
+	transition: all 300ms;
+}
+
+.contenedor .boton:hover{
+	transform: translateY(5px);
+	box-shadow: 0px 30px 5px -15px rgba(0,0,0,0.3);
+}
+
+.contenedor .sidebarUno{
+	background: blue;
+	/*Forma 1*/
+	/*grid-column-start: sidebarUno;
+	grid-column-end: sidebarUno;	
+
+	grid-row-start: sidebarUno;
+	grid-row-end: sidebarUno;*/
+
+	/*Forma 2*/
+	/*grid-column: sidebarUno;
+	grid-row: sidebarUno;*/
+
+	/*Forma 3*/
+	grid-area: sidebarUno;
+}
+
+.contenedor .contenido{
+	background: grey;
+	color: black;
+	grid-area: contenido;
+	text-align: left;
+	font-size: 18px;
+}
+
+.contenedor .widget{
+	background: green;
+	color: black;
+	grid-area: widget;
+}
+
+.contenedor .sidebarDos{
+	background: yellow;
+	color: black;
+	grid-area: sidebarDos;
+}
+
+.contenedor .footer{
+	background: #f19484;;
+	color: white;
+	grid-area: footer;
+}
+
+@media screen and (max-width: 768px){
+	.contenedor {
+		grid-template-areas: "header 		header 		header     header   header"
+						     "boton         boton       boton      boton    boton"
+	                         "contenido 	contenido 	contenido  sidebarUno sidebarUno"
+	                         "contenido 	contenido 	contenido  sidebarUno sidebarUno"
+	                         "contenido 	contenido 	contenido  sidebarUno sidebarUno"
+	                         "widget     	widget 		widget     sidebarDos sidebarDos"
+	                         "widget     	widget 		widget     sidebarDos sidebarDos"
+	                         "widget     	widget 		widget     sidebarDos sidebarDos"
+	                         "footer 		footer 		footer     footer   footer";
+
+	}
+}
+
+
